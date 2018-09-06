@@ -67,14 +67,15 @@ function columnToRow(col) {
   let i = 0
   while(row.length < n){
     var num = (col[i].diff(row))[0]
-    //pushing num to the end
+    // TODO: find better solution for this workaround
+    //workaround to shuffle the current column by place num at the end
     if (randomNumber(2) === 2) col[i].push(col[i].splice(col[i].indexOf(num),1)[0])
-    // check if it ran into dead-end or it has to go one step back
+    // check if it ran into dead-end
     if(num === undefined) {
+      //going back to the beginning
       i = 0
       row = []
     } else {
-      //only mainitaining wl for each column
       row.push(num)
       i++
     }}

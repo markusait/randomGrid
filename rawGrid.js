@@ -1,4 +1,4 @@
-//max ca. 30
+//max n ca. 30
 var n = 35
 
 function randomNumber(n) {
