@@ -1,5 +1,5 @@
 // max n ca. 60
-var n = 45
+var n = 9
 
 var randomNumber = (n) => {
   return Math.floor(Math.random() * n + 1);
