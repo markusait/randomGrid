@@ -88,11 +88,19 @@ function makeGrid() {
   while (grid.length < n){
     grid.push(columnToRow(possibleColumns(grid)))
   }
-  console.log(grid)
+  return grid
+}
+var grid = makeGrid()
+
+module.exports = {
+  grid,
+  n
 }
 
-var start = new Date().getTime();
-makeGrid();
-var end = new Date().getTime();
-var time = end - start;
-console.log('Execution time in ms: ' + time);
+
+
+// var start = new Date().getTime();
+// makeGrid();
+// var end = new Date().getTime();
+// var time = end - start;
+// console.log('Execution time in ms: ' + time);
